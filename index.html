@@ -11,6 +11,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -21,120 +25,459 @@
 
   <!-- Components to use: -->
   <!-- Scrollspy for sidebar -->
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+  <body id="htmlPage">
+    <header
+      id="header"
+      class="header d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- NAVBAR -->
+      <nav class="nav nav-pills flex-column text-end light-mode">
+        <a class="nav-link" aria-current="page" href="#hero">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#resume">Resume</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#certificates">Certificates</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <!-- TOGGLE DARK MODE -->
+      <div class="row justify-content-center pt-4" id="toggle">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox-label">
+          <i class="bi bi-moon"></i>
+          <i class="bi bi-brightness-high-fill"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- HERO -->
+      <section id="hero" class="hero dark-background">
+        <img
+          src="assets\20231014_052518309_iOS_3_2 (Large).png"
+          alt="hero image"
+        />
+        <div class="container text-light">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <h2>Qamarul Hafiz</h2>
+              <p>I am a Frontend & UI/UX Designer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container text-center section-title">
+          <h2>About me</h2>
+          <p>
+            Hey there! 👋 I'm a UI/UX Designer with about 4 years of crafting
+            digital experiences in Kuala Lumpur. My passion for design has led
+            me on an exciting journey into frontend development – I'm currently
+            immersing myself in code through online courses. I love combining my
+            eye for design with growing technical skills to create beautiful,
+            functional websites. <br /><br />Consider this portfolio my digital
+            sandbox – a place where I flex my styling muscles and showcase what
+            I've learned. My curiosity never hits the snooze button, and I'm
+            always up for a good challenge. Currently leveling up my JavaScript
+            game before jumping into React (everyone keeps telling me it's a
+            game-changer!). One step at a time, right?
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <img
+                src="assets\20231014_052518309_iOS_2.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col">
+              <h2>Frontend & UI/UX Designer</h2>
+              <p>
+                Interested in working together? I'm open to new opportunities
+                and would love to hear from you.
+              </p>
+              <div class="row">
+                <div class="col">
+                  <p><b>Phone:</b> +0122419599</p>
+                  <p><b>City:</b> Kepong, MY</p>
+                </div>
+                <div class="col">
+                  <p><b>Email:</b> hafizqamarul19@gmail.com</p>
+                  <p><b>LinkedIn:</b> Qamarul Hafiz</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume" class="section">
+        <div class="container text-center section-title">
+          <h2>My Timeline</h2>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <img src="assets\2x.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col">
+              <h6>2022 - 2023</h6>
+              <h3>UI/UX Designer</h3>
+              <p class="company">2X Marketing</p>
+              <p>
+                I teamed up with varied groups for multiple clients, to produce
+                captivating visuals for social media, emails, and web design. I
+                strategized user journeys that harmonize user preferences and
+                technology, and fashioned UI mock-ups to exhibit site
+                functionality. I also addressed UX challenges while enhancing
+                pages to uphold a high click-through rate (CTR).
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <img src="assets\ofo.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col">
+              <h6>2020 - 2022</h6>
+              <h3>UI/UX Designer</h3>
+              <p class="company">OFO Tech Sdn. Bhd.</p>
+              <p>
+                I specialize in crafting Android, iOS, and web designs that
+                encompass wireframing, designing prototypes, and conducting
+                thorough testing across a diverse range of clients. My process
+                involves close collaboration with developers to ensure the
+                seamless realization of project objectives.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <img src="assets\slb.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col">
+              <h6>2020 - 2020</h6>
+              <h3>Graphic Designer (Intern)</h3>
+              <p class="company">Schlumberger (M) Sdn. Bhd.</p>
+              <p>
+                I creatively converted subject matter into captivating designs
+                for various communication mediums such as newsletters, emails,
+                promotional materials, and sales collateral. This process not
+                only allowed me to convey the intended messages effectively but
+                also provided an opportunity further to develop my skills and
+                understanding of design tools.
+              </p>
+            </div>
+          </div>
+
+          <!-- EDUCATION -->
+          <!-- DIVIDER HERE -->
+          <div class="row">
+            <div class="col-2">
+              <img src="assets\iium.jpeg" class="img-fluid" alt="" />
+            </div>
+            <div class="col">
+              <h6>2016 - 2020</h6>
+              <h3>Bachelor of Information Technology (Honours)</h3>
+              <p class="company">International Islamic University Malaysia</p>
+              <p>
+                Graduated in 2020 with 3.61 CGPA. Specialized in Digital Media
+                and Design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container text-center section-title">
+          <h2>Skills</h2>
+          <p>
+            This is just my rough estimate of my current skill of each of the
+            languages
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row skills-row">
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>HTML</p>
+                <p>75%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+                <div class="progress-bar" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>CSS</p>
+                <p>60%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="60"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row skills-row">
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>JavaScript</p>
+                <p>60%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="60"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>React</p>
+                <p>30%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="30"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row skills-row">
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>jQuery</p>
+                <p>15%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="15"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar" style="width: 15%"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between">
+                <p>Express</p>
+                <p>10%</p>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div class="progress-bar" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="section">
+        <div class="container text-center section-title section-title">
+          <h2>Portfolio</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="card col" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <div class="card col" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <div class="card col" style="width: 18rem">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certificates" class="section">
+        <div class="container text-center section-title section-title">
+          <h2>Certificates</h2>
+          <p>Professional Credentials & Technical Certifications</p>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">JavaScript & Data Structures</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    freeCodeCamp | Jul 2024
+                  </h6>
+                  <p class="card-text">
+                    In depth hands on experience in JavaScript and Data
+                    Structures
+                  </p>
+                  <a
+                    href="https://www.freecodecamp.org/certification/hahafiz/javascript-algorithms-and-data-structures-v8"
+                    class="card-link"
+                    >Show Credential</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Responsive Web Design</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    freeCodeCamp | Jun 2024
+                  </h6>
+                  <p class="card-text">
+                    This course covers the fundamentals of responsive web
+                    design.
+                  </p>
+                  <a
+                    href="https://www.freecodecamp.org/certification/hahafiz/responsive-web-design"
+                    class="card-link"
+                    >Show Credential</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Google UX Design</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">
+                    Google | May 2023
+                  </h6>
+                  <p class="card-text">
+                    Completed seven courses that include hands-on,
+                    practice-based assessments.
+                  </p>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/certificate/WY8WR5NPZUGH"
+                    class="card-link"
+                    >Show Credential</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container text-center section-title section-title">
+          <h2>Contact</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="container">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Check me out</label
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-      </div>
-    </nav>
+      </section>
 
-    <!-- HERO -->
-    <section id="hero" class="hero dark-background">
-      <img src="assets\20231014_052518309_iOS_2.jpg" alt="hero image" />
-      <div class="container text-light">
-        <div class="row">
-          <div class="col-lg-9">
-            <h2>Qamarul Hafiz</h2>
-            <p>I am a Web Developer</p>
-          </div>
+      <!-- FOOTER -->
+      <footer>
+        <div class="container text-center section-title">
+          <p>&copy; 2023 Qamarul Hafiz. All rights reserved.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="">
-      <div class="container">
-        <h2>About me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="row">
-        <div class="card col" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card col" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card col" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button type="button" class="btn btn-primary">Primary</button>
+      </footer>
+    </main>
   </body>
 </html>

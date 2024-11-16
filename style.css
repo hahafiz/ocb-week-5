@@ -1,15 +1,185 @@
+/* FONTS */
+:root {
+  --default-font: "Poppins", sans-serif;
+  --heading-font: "Poppins", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+/* -------- HEADERS -------- */
+.header {
+  color: rgba(var(--default-color), 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+  min-width: 200px;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    margin-left: 160px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .header ~ main {
+    margin-left: 200px;
+  }
+
+  .header ~ main .hero {
+    margin-left: -200px;
+    width: 100vw;
+  }
+}
+
+/* -------- GLOBAL COLORS -------- */
+:root {
+  --background-color: 255, 255, 255;
+  --default-color: 39, 40, 41;
+  --heading-color: 69, 80, 91;
+  --accent-color: 5, 99, 187;
+  --surface-color: 255, 255, 255;
+  --contrast-color: 255, 255, 255;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
 
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+/* -------- GLOBAL SECTIONS -------- */
+body {
+  color: rgba(var(--default-color), 1);
+  background-color: rgba(var(--background-color), 1);
+  font-family: var(--default-font);
 }
 
+a {
+  color: rgba(var(--accent-color));
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* hero light color navbar text */
+.nav-pills.light-mode .nav-link {
+  color: #ffffff;
+}
+
+/* .nav-link:target {
+  color: rgba(var(--contrast-color));
+  background-color: rgba(var(--accent-color));
+}
+
+a:hover {
+  color: rgba(var(--contrast-color)) !important;
+  background-color: rgba(var(--accent-color));
+  text-decoration: none;
+} */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(var(--heading-color));
+  font-family: rgba(var(--heading-font));
+} */
+
+section,
+.section {
+  padding: 60px 0;
+  overflow: clip;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.light-background {
+  --background-color: 249, 249, 249;
+  --surface-color: 255, 255, 255;
+}
+
+.dark-background {
+  --background-color: 6, 6, 6;
+  --default-color: 255, 255, 255;
+  --heading-color: 255, 255, 255;
+  --surface-color: 37, 37, 37;
+  --contrast-color: 255, 255, 255;
+}
+
+/* TOGGLE BUTTON */
+#toggle {
+  width: 56px;
+  position: relative;
+  left: 15px;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  display: none !important;
+}
+
+.checkbox-label {
+  background-color: rgba(var(--accent-color), 1);
+  width: 56px;
+  height: 30px;
+  border-radius: 56px;
+  position: relative;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bi-moon {
+  color: #f1c40f;
+  position: relative;
+  right: 5px;
+}
+
+.bi-brightness-high-fill {
+  color: #f39c12;
+  position: relative;
+  left: 5px;
+}
+
+.checkbox-label .ball {
+  background-color: rgba(var(--background-color));
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+#checkbox {
+  display: none;
+}
+
+/* -------- HERO -------- */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -22,7 +192,8 @@
 
 .hero::before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: rgba(var(--background-color), 0.6);
+  /* background: rgba(255, 255, 255, 0.5); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -43,6 +214,57 @@
   z-index: 3;
 }
 
+.hero h2 {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 5px 0 0 0;
+  font-size: 26px;
+}
+
 img {
   vertical-align: middle;
+}
+
+/* -------- ABOUT -------- */
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 240px;
+  height: 1px;
+  /* background: color-mix(in srgb, var(--default-color), transparent 60%); */
+  background: rgba(var(--default-color), 0.3);
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: rgba(var(--accent-color));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#resume .row {
+  padding-bottom: 32px;
+}
+
+.skills-row {
+  padding-bottom: 8px;
+}
+
+#skills p {
+  margin-bottom: 4px;
 }
