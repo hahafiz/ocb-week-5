@@ -2,14 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav-pills");
   const navLinks = document.querySelectorAll(".nav-link");
   const scrollThreshold = window.innerHeight * 0.45;
+  const offcanvas = document.querySelector(".offcanvas-xl");
 
   // handle scroll events
   window.addEventListener("scroll", () => {
     // change nav color pass hero section
     if (window.scrollY > scrollThreshold) {
       nav.classList.remove("light-mode");
+      offcanvas.classList.remove("light-mode");
     } else {
       nav.classList.add("light-mode");
+      offcanvas.classList.add("light-mode");
     }
   });
 
@@ -48,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const html = document.getElementById("htmlPage");
 const h2 = document.querySelector("h2");
 const checkbox = document.getElementById("checkbox");
+
 checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
     html.setAttribute("data-bs-theme", "dark");

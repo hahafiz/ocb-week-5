@@ -31,7 +31,57 @@
       class="header d-flex flex-column justify-content-center align-items-center"
     >
       <!-- NAVBAR -->
-      <nav class="nav nav-pills flex-column text-end light-mode">
+      <button
+        class="btn btn-primary d-xl-none responsive-nav"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive"
+        aria-controls="offcanvasResponsive"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div
+        class="offcanvas-xl offcanvas-start light-mode"
+        tabindex="-1"
+        id="offcanvasResponsive"
+        aria-labelledby="offcanvasResponsiveLabel"
+      >
+        <div class="offcanvas-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasResponsive"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div
+          class="offcanvas-body d-flex flex-column justify-content-center align-items-center"
+        >
+          <nav class="nav nav-pills flex-column text-end light-mode">
+            <a class="nav-link" aria-current="page" href="#hero">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#resume">Resume</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+            <a class="nav-link" href="#certificates">Certificates</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </nav>
+
+          <!-- TOGGLE DARK MODE -->
+          <div class="row justify-content-center pt-4" id="toggle">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="checkbox-label">
+              <i class="bi bi-moon"></i>
+              <i class="bi bi-brightness-high-fill"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- <nav class="nav nav-pills flex-column text-end light-mode">
         <a class="nav-link" aria-current="page" href="#hero">Home</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#resume">Resume</a>
@@ -39,17 +89,17 @@
         <a class="nav-link" href="#portfolio">Portfolio</a>
         <a class="nav-link" href="#certificates">Certificates</a>
         <a class="nav-link" href="#contact">Contact</a>
-      </nav>
+      </nav> -->
 
       <!-- TOGGLE DARK MODE -->
-      <div class="row justify-content-center pt-4" id="toggle">
+      <!-- <div class="row justify-content-center pt-4" id="toggle">
         <input type="checkbox" class="checkbox" id="checkbox" />
         <label for="checkbox" class="checkbox-label">
           <i class="bi bi-moon"></i>
           <i class="bi bi-brightness-high-fill"></i>
           <div class="ball"></div>
         </label>
-      </div>
+      </div> -->
     </header>
 
     <main class="main">
@@ -103,7 +153,7 @@
                 Interested in working together? I'm open to new opportunities
                 and would love to hear from you.
               </p>
-              <div class="row">
+              <div class="row row-cols-1 row-cols-sm-2">
                 <div class="col">
                   <p><b>Phone:</b> +0122419599</p>
                   <p><b>City:</b> Kepong, MY</p>
@@ -209,21 +259,21 @@
         </div>
 
         <div class="container">
-          <div class="row skills-row">
+          <div class="row skills-row row-cols-1 row-cols-sm-2">
             <div class="col">
               <div class="d-flex justify-content-between">
                 <p>HTML</p>
-                <p>75%</p>
+                <p>85%</p>
               </div>
               <div
                 class="progress"
                 role="progressbar"
                 aria-label="Basic example"
-                aria-valuenow="75"
+                aria-valuenow="85"
                 aria-valuemin="0"
                 aria-valuemax="100"
               >
-                <div class="progress-bar" style="width: 75%"></div>
+                <div class="progress-bar" style="width: 85%"></div>
               </div>
             </div>
             <div class="col">
@@ -243,7 +293,7 @@
               </div>
             </div>
           </div>
-          <div class="row skills-row">
+          <div class="row skills-row row-cols-1 row-cols-sm-2">
             <div class="col">
               <div class="d-flex justify-content-between">
                 <p>JavaScript</p>
@@ -277,7 +327,7 @@
               </div>
             </div>
           </div>
-          <div class="row skills-row">
+          <div class="row skills-row row-cols-1 row-cols-sm-2">
             <div class="col">
               <div class="d-flex justify-content-between">
                 <p>jQuery</p>
@@ -318,36 +368,86 @@
       <section id="portfolio" class="section">
         <div class="container text-center section-title section-title">
           <h2>Portfolio</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Have a look at some of my previous work</p>
         </div>
 
         <div class="container">
-          <div class="row">
-            <div class="card col" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="assets\eSticker.jpg"
+                  class="card-img-top img-fluid"
+                  alt="..."
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between"
+                >
+                  <div>
+                    <h5 class="card-title">MBPJ eSticker</h5>
+                    <p class="card-text">
+                      An online platform for Selangor OKU citizen to register
+                      vehicle sticker
+                    </p>
+                  </div>
+
+                  <a
+                    href="https://qam.framer.website/mbpj-esticker"
+                    class="btn btn-primary"
+                    >View More</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="card col" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="assets\behance prolintas cover-02.png"
+                  class="card-img-top img-fluid"
+                  alt="..."
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between"
+                >
+                  <div>
+                    <h5 class="card-title">PROLINTAS Digital Assist</h5>
+                    <p class="card-text">
+                      Designed to help PROLINTAS highway users with real-time
+                      traffic, traffic updates and send SOS for assistance
+                    </p>
+                  </div>
+
+                  <a
+                    href="https://qam.framer.website/prolintas-digital-assist"
+                    class="btn btn-primary"
+                    >View More</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="card col" style="width: 18rem">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="assets\behance harmoni cover-02.png"
+                  class="card-img-top img-fluid"
+                  alt="..."
+                />
+                <div
+                  class="card-body d-flex flex-column justify-content-between"
+                >
+                  <div>
+                    <h5 class="card-title">Harmoni Community App</h5>
+                    <p class="card-text">
+                      A mobile app designed to enhance quality of life
+                      experience for residence
+                    </p>
+                  </div>
+                  <a
+                    href="https://qam.framer.website/harmoni-community"
+                    class="btn btn-primary"
+                    >View More</a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -362,9 +462,9 @@
         </div>
 
         <div class="container">
-          <div class="row">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
             <div class="col">
-              <div class="card">
+              <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">JavaScript & Data Structures</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -383,7 +483,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card">
+              <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Responsive Web Design</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
@@ -402,7 +502,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card">
+              <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Google UX Design</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary">
